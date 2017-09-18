@@ -22,7 +22,7 @@ function get(url, data, callback, dataType) {
 
 //随机获取音乐
 function start() {
-    get('http://api.jirengu.com/fm/getSong.php', {channel: "public_yuzhong_yueyu"}, function (ret) {
+    get('https://jirenguapi.applinzi.com/fm/getSong.php', {channel: "public_yuzhong_yueyu"}, function (ret) {
 
         loadMusic(ret);
     });
