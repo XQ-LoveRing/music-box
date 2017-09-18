@@ -1,0 +1,75 @@
+
+        body {
+            /*font-size:18px;*/
+        }
+
+        #music-box {
+            width: 350px;
+            /*height: 100px;*/
+            border: 1px solid #3ddb8d;
+            padding-left:20px;
+            padding-top: 20px;
+        }
+
+        .control {
+            display: inline-block;
+            /*margin-top:30px;*/
+            box-sizing: border-box;
+            /*padding-top:10px;*/
+            padding-right:40px;
+        }
+
+        .control-item {
+            font-size: 30px;
+            color: #fc6c71;
+            display: inline-block;
+            margin-left:5px;
+        }
+
+        .pause-button {
+            display: none;
+        }
+
+        .pre-button{
+            margin-left:0;
+        }
+
+        .song-des {
+            display: inline-block;
+            /*margin-top:5px;*/
+        }
+
+        .song-des .author{
+            font-size: 12px;
+        }
+
+        .music-box .progress{
+            width: 260px;
+        }
+        .music-box .progress .bar {
+            height: 3px;
+            margin-top: 5px;
+            background-color: rgba(0,0,0,0.2);
+            cursor: pointer;
+        }
+        .music-box .progress .progress-now{
+            background-color: #ee8a87;
+            height: 3px;
+            width: 0;
+            position: relative;
+        }
+        .music-box .time{
+            text-align: right;
+        }
+
+
+        /*iconfont
+             */
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+
