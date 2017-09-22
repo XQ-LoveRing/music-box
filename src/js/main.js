@@ -23,13 +23,10 @@
 // ];
 
 
-
 //获取DOM元素
 var playBtn = document.querySelector('.play-button');
 var preBtn = document.querySelector('.pre-button');
 var nextBtn = document.querySelector('.next-button');
-//    var volDown = document.querySelector('.vol-down');
-//    var volUp = document.querySelector('.vol-up');
 var titleNode = document.querySelector('.music-box .song');
 var authorNode = document.querySelector('.music-box .singer ');
 var timeNode = document.querySelector('.music-box .current-time');
@@ -39,10 +36,10 @@ var totalTime = document.querySelector('.music-box .totol-time');
 var tab = document.querySelector('.music-box .tab');
 var xunhuan = document.querySelector('.music-box .xunhuan');
 var vol = document.querySelector('.music-box .vol-button');
-var des=document.querySelector('.music-box .des');
-var lyc=document.querySelector('.lyrics');
-var heijiao=document.querySelector('.kuan');
-var bg=document.querySelector('.bg');
+var des = document.querySelector('.music-box .des');
+var lyc = document.querySelector('.lyrics');
+var heijiao = document.querySelector('.kuan');
+var bg = document.querySelector('.bg');
 
 var music = new Audio();
 music.autoplay = true;
@@ -184,12 +181,12 @@ vol.onclick = function () {
 
 
 
-var waterful=function () {
+var waterful = function () {
     function init() {
         waterFull();
     }
 
-    function  waterFull() {
+    function waterFull() {
         var content = document.querySelector('.cate');
         var items = document.querySelectorAll('.cate li');
 
@@ -206,27 +203,27 @@ var waterful=function () {
         }
 
         items.forEach(function (value, index, array) {
-                // console.log(window.getComputedStyle(items[index],null).width)
-                var idx=index+1;
-                if(idx<items.length){
-                    items[idx].style.height = hc[index] + "px";
-                    items[idx].style.lineHeight = hc[index] + "px";
+            // console.log(window.getComputedStyle(items[index],null).width)
+            var idx = index + 1;
+            if (idx < items.length) {
+                items[idx].style.height = hc[index] + "px";
+                items[idx].style.lineHeight = hc[index] + "px";
 
-                    var minValue = Math.min.apply(null, itemArr);
-                    var minIndex = itemArr.indexOf(minValue);
+                var minValue = Math.min.apply(null, itemArr);
+                var minIndex = itemArr.indexOf(minValue);
 
-                    //设置位置
-                    items[idx].style.top=itemArr[minIndex]+'px';
-                    items[idx].style.left=items[idx].offsetWidth*minIndex+'px';
-                    itemArr[minIndex]+=parseInt(items[idx].style.height)
-                }
-
+                //设置位置
+                items[idx].style.top = itemArr[minIndex] + 'px';
+                items[idx].style.left = items[idx].offsetWidth * minIndex + 'px';
+                itemArr[minIndex] += parseInt(items[idx].style.height)
             }
+
+        }
         );
     }
 
     return {
-        init:init
+        init: init
     }
 }();
 
@@ -236,19 +233,19 @@ var waterful=function () {
 
 
 //显示专辑菜单
-var catbtn=document.querySelector('.cate-button');
-var cate=document.querySelector('.cate')
-catbtn.onclick=function () {
-      if(window.getComputedStyle(cate,null).visibility==="hidden"){
-          cate.style.visibility="visible";
-          // console.log(des)
-          des.style.visibility="hidden";
-          lyc.style.visibility="hidden";
-      }else{
-          cate.style.visibility="hidden";
-          des.style.visibility="visible";
-          lyc.style.visibility="visible";
-      }
+var catbtn = document.querySelector('.cate-button');
+var cate = document.querySelector('.cate')
+catbtn.onclick = function () {
+    if (window.getComputedStyle(cate, null).visibility === "hidden") {
+        cate.style.visibility = "visible";
+        // console.log(des)
+        des.style.visibility = "hidden";
+        lyc.style.visibility = "hidden";
+    } else {
+        cate.style.visibility = "hidden";
+        des.style.visibility = "visible";
+        lyc.style.visibility = "visible";
+    }
 
 
 }
