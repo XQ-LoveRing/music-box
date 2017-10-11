@@ -197,7 +197,6 @@ var musicBox = function() {
         xhr.open('GET', url, true);
         xhr.send();
     };
-
     //随机获取音乐
     Musicbox.prototype.start = function() {
         var self = this;
@@ -208,19 +207,20 @@ var musicBox = function() {
 
     //加载音乐信息
     Musicbox.prototype.loadMusic = function(songObj) {
-    	var self=this;
+        var self=this;
         var song = songObj.song[0];
         var img=new Image();
-        // 解决加载图片闪动问题
         img.src=song.picture;
         img.onload=function(){
             self.heijiao.style.backgroundImage = "url(" + song.picture + ")";
             self.bg.style.backgroundImage = "url(" + song.picture + ")";
         }
+       
         this.music.src = song.url;
         this.titleNode.innerText = song.title;
         this.authorNode.innerText = song.artist;
         this.renderLyc(song.sid);
+
     };
 
     //获取歌词并创建节点
@@ -311,6 +311,7 @@ var musicBox = function() {
         });
     };
 
+    //someBug happening in github
 
     //创建专辑单元
     Musicbox.prototype.createCats = function(data) {
